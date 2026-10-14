@@ -21,7 +21,7 @@ class AppPage extends StatelessWidget {
     final isDark = Theme.of(context).brightness == Brightness.dark;
     return Scaffold(
       appBar: AppBar(
-        title: Text(title),
+        title: FittedBox(fit: BoxFit.scaleDown, child: Text(title)),
         actions: [
           IconButton(
             tooltip: isDark ? 'Светлая тема' : 'Тёмная тема',
