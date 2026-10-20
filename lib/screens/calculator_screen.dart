@@ -35,8 +35,6 @@ class _CalculatorScreenState extends State<CalculatorScreen> {
   void _submit() {
     if (!_formKey.currentState!.validate()) return;
 
-    // Аналог redirect после @PostMapping: данные уходят в адрес,
-    // а расчёт выполняет экран результата. Uri сам кодирует «+» как %2B.
     final uri = Uri(
       path: '/calculator/result',
       queryParameters: {

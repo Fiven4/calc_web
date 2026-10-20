@@ -1,8 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
-/// Настройки, которые переживают перезагрузку страницы
-/// (в браузере shared_preferences хранит их в localStorage).
 class AppStorage {
   AppStorage._();
 
@@ -12,7 +10,6 @@ class AppStorage {
 
   static late SharedPreferences _prefs;
 
-  /// Текущая тема; MaterialApp перестраивается при её изменении.
   static final ValueNotifier<ThemeMode> themeMode = ValueNotifier(
     ThemeMode.light,
   );
@@ -29,7 +26,6 @@ class AppStorage {
     return _prefs.setString(_themeKey, dark ? 'dark' : 'light');
   }
 
-  /// Последняя выбранная пара валют или null, если её ещё не сохраняли.
   static (String, String)? get lastPair {
     final from = _prefs.getString(_fromKey);
     final to = _prefs.getString(_toKey);

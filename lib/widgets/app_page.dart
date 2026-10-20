@@ -2,8 +2,6 @@ import 'package:flutter/material.dart';
 
 import '../storage.dart';
 
-/// Каркас экрана: заголовок, переключатель темы и содержимое,
-/// ограниченное по ширине и прокручиваемое на низких окнах.
 class AppPage extends StatelessWidget {
   final String title;
   final Widget child;

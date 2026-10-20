@@ -6,7 +6,6 @@ import 'storage.dart';
 
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
-  // Убирает решётку из адреса: /calculator вместо /#/calculator
   usePathUrlStrategy();
   await AppStorage.init();
   runApp(const CalcApp());

@@ -22,7 +22,6 @@ class _ConverterScreenState extends State<ConverterScreen> {
   @override
   void initState() {
     super.initState();
-    // Восстанавливаем последнюю выбранную пару, если она ещё допустима.
     final saved = AppStorage.lastPair;
     final valid =
         saved != null &&

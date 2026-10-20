@@ -1,6 +1,5 @@
 import 'calculator.dart';
 
-/// Курсы заданы константами: сколько единиц валюты стоит 1 доллар США.
 const Map<String, double> ratesPerUsd = {
   'USD': 1,
   'EUR': 0.92,
@@ -38,7 +37,6 @@ class ConvertFailure extends ConvertResult {
   const ConvertFailure(this.message);
 }
 
-/// Переводит сумму из одной валюты в другую по «сырым» параметрам адреса.
 ConvertResult convert(String? rawFrom, String? rawTo, String? rawAmount) {
   if (rawFrom == null || rawTo == null || rawAmount == null) {
     return const ConvertFailure(

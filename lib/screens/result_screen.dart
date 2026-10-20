@@ -3,8 +3,6 @@ import 'package:go_router/go_router.dart';
 
 import '../widgets/app_page.dart';
 
-/// Экран результата. Получает всё только из адреса (через router.dart),
-/// поэтому работает и после перехода из формы, и при прямом открытии ссылки.
 class ResultScreen extends StatelessWidget {
   final String title;
   final String expression;

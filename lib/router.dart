@@ -16,7 +16,6 @@ final appRouter = GoRouter(
       path: '/calculator',
       builder: (context, state) => const CalculatorScreen(),
       routes: [
-        // Вложенный маршрут: итоговый адрес — /calculator/result
         GoRoute(
           path: 'result',
           builder: (context, state) {
@@ -68,7 +67,6 @@ final appRouter = GoRouter(
       ],
     ),
   ],
-  // Аналог страницы 404: сюда попадают все неизвестные адреса
   errorBuilder: (context, state) =>
       NotFoundScreen(location: state.uri.toString()),
 );
